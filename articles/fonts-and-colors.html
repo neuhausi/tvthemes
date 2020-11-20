@@ -90,7 +90,8 @@
 
       
 
-      </header><script src="fonts-and-colors_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="fonts-and-colors_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="fonts-and-colors_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="fonts-and-colors_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Fonts &amp; Colors</h1>
@@ -109,40 +110,36 @@
 <p>The difficulty with a lot of the fonts used by TV shows in their logos and other paraphernalia is that they are made by font foundries and therefore can be rather expensive (for a regular person like you or me) to purchase. So I endeavored to find FREE fonts to use that were somewhat similar to the real ones used by the shows from resources like <code>Google Fonts</code>. In the documentation you can find the <strong>actual</strong> fonts used by the TV shows if you are so inclined to buy them (some are just my best guesses though)! In some cases there were fan-made fonts such as “Some Time Later” for Spongebob or “Akbar” for The Simpsons that I included with the package.</p>
 <p>Instead of dealing with <code>extrafont</code> yourself, I re-purposed the <code>import_*()</code> functions from the <code>hrbrthemes</code> package so you can import the included fonts very easily. Do note that you still might need to install the fonts directly on your computer from the <code>.ttf</code> files found in <code>inst/fonts</code>. When you’re done running the functions and installing the <code>.ttf</code> files on your computer, load the <code>extrafont</code> library and then run <code><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html">loadfonts()</a></code>. If you’re having problems check out the documentation on <code>extrafont</code>’s <a href="https://github.com/wch/extrafont/">Github repo</a> or on <a href="https://CRAN.R-project.org/package=extrafont/">CRAN</a>.</p>
 <p>The help files for each function tells you the recommended font names in case you forget! Besides the really custom stuff like for “The Simpsons”, “Rick &amp; Morty”, and “SpongeBob”, font preferences are really up to you.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/Ryo-N7/tvthemes">tvthemes</a></span>)
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Ryo-N7/tvthemes">tvthemes</a></span><span class="op">)</span>
 
-<span class="fu"><a href="../reference/import_simpsons.html">import_simpsons</a></span>()         <span class="co">## "Akbar" font</span>
-<span class="fu"><a href="../reference/import_avatar.html">import_avatar</a></span>()           <span class="co">## "Slayer" font (formerly `theme_theLastAirbender()`)</span>
-<span class="fu"><a href="../reference/import_rickAndMorty.html">import_rickAndMorty</a></span>()     <span class="co">## "Get Schwifty" font</span>
-<span class="fu"><a href="../reference/import_robotoCondensed.html">import_robotoCondensed</a></span>()  <span class="co">## "Roboto Condensed" Google Font import from hrbrthemes</span>
-<span class="fu"><a href="../reference/import_titilliumWeb.html">import_titilliumWeb</a></span>()     <span class="co">## "Titillium Web" Google Font import from hrbrthemes</span>
-<span class="fu"><a href="../reference/import_spongeBob.html">import_spongeBob</a></span>()        <span class="co">## "Some Time Later" font</span>
-<span class="fu"><a href="../reference/import_cinzel.html">import_cinzel</a></span>()           <span class="co">## "Cinzel" font to use with 'The Palettes of Ice &amp; Fire'</span>
-<span class="fu"><a href="../reference/import_chelseaMarket.html">import_chelseaMarket</a></span>()    <span class="co">## "Chelsea Market" font for "Hilda"</span>
-<span class="fu"><a href="../reference/import_gravitationFalls.html">import_gravitationFalls</a></span>() <span class="co">## "Gravitation Falls" font for "Gravity Falls"</span>
+<span class="fu"><a href="../reference/import_simpsons.html">import_simpsons</a></span><span class="op">(</span><span class="op">)</span>         <span class="co">## "Akbar" font</span>
+<span class="fu"><a href="../reference/import_avatar.html">import_avatar</a></span><span class="op">(</span><span class="op">)</span>           <span class="co">## "Slayer" font (formerly `theme_theLastAirbender()`)</span>
+<span class="fu"><a href="../reference/import_rickAndMorty.html">import_rickAndMorty</a></span><span class="op">(</span><span class="op">)</span>     <span class="co">## "Get Schwifty" font</span>
+<span class="fu"><a href="../reference/import_robotoCondensed.html">import_robotoCondensed</a></span><span class="op">(</span><span class="op">)</span>  <span class="co">## "Roboto Condensed" Google Font import from hrbrthemes</span>
+<span class="fu"><a href="../reference/import_titilliumWeb.html">import_titilliumWeb</a></span><span class="op">(</span><span class="op">)</span>     <span class="co">## "Titillium Web" Google Font import from hrbrthemes</span>
+<span class="fu"><a href="../reference/import_spongeBob.html">import_spongeBob</a></span><span class="op">(</span><span class="op">)</span>        <span class="co">## "Some Time Later" font</span>
+<span class="fu"><a href="../reference/import_cinzel.html">import_cinzel</a></span><span class="op">(</span><span class="op">)</span>           <span class="co">## "Cinzel" font to use with 'The Palettes of Ice &amp; Fire'</span>
+<span class="fu"><a href="../reference/import_chelseaMarket.html">import_chelseaMarket</a></span><span class="op">(</span><span class="op">)</span>    <span class="co">## "Chelsea Market" font for "Hilda"</span>
+<span class="fu"><a href="../reference/import_gravitationFalls.html">import_gravitationFalls</a></span><span class="op">(</span><span class="op">)</span> <span class="co">## "Gravitation Falls" font for "Gravity Falls"</span>
 
 <span class="co">## install.packages("extrafont")</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/wch/extrafont">extrafont</a></span>)
-<span class="fu"><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html">loadfonts</a></span>() <span class="co">## You need to do this at the beginning of a session.</span>
-</pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/wch/extrafont">extrafont</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html">loadfonts</a></span><span class="op">(</span><span class="op">)</span> <span class="co">## You need to do this at the beginning of a session.</span></code></pre></div>
 </div>
 <div id="colors" class="section level1">
 <h1 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h1>
 <p>I gathered the colors/hex codes by looking at images online or re-watching some old episodes and then using various hex code websites and hex code extraction websites. The colors in some of these palettes may still change from feedback and further experimentation.</p>
 <p>You can check out all the colors for each palette by running <code><a href="https://scales.r-lib.org//reference/show_col.html">scales::show_col(tvthemes:::name_of_palette)</a></code>. Some examples below:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">brooklyn99_palette</span><span class="op">$</span><span class="kw">Dark</span>)
-</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">brooklyn99_palette</span><span class="op">$</span><span class="va">Dark</span><span class="op">)</span></code></pre></div>
 <p><img src="fonts-and-colors_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">gravityFalls_palette</span>)
-</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">gravityFalls_palette</span><span class="op">)</span></code></pre></div>
 <p><img src="fonts-and-colors_files/figure-html/unnamed-chunk-3-2.png" width="700"></p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">simpsons_palette</span>)
-</pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">simpsons_palette</span><span class="op">)</span></code></pre></div>
 <p><img src="fonts-and-colors_files/figure-html/unnamed-chunk-3-3.png" width="700"></p>
 </div>
   </div>

@@ -90,7 +90,8 @@
 
       
 
-      </header><script src="tvthemes-1_0_0_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="tvthemes-1_0_0_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="tvthemes-1_0_0_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="tvthemes-1_0_0_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>{tvthemes} 1.0.0</h1>
@@ -103,10 +104,9 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/Ryo-N7/tvthemes">tvthemes</a></span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Ryo-N7/tvthemes">tvthemes</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></code></pre></div>
 <div id="tvthemes-1-0-0-major-changes" class="section level1">
 <h1 class="hasAnchor">
 <a href="#tvthemes-1-0-0-major-changes" class="anchor"></a>tvthemes 1.0.0 Major Changes</h1>
@@ -163,15 +163,14 @@
 </li>
 </ul>
 <p>For TV shows with multiple palettes they are now organized under a single “palette list” from which you pass the specific palette that you want. If you want to check out the colors for these specific palettes:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co">## Previously:</span>
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">lannister_palette</span>)
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">brooklyn99_dark_palette</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Previously:</span>
+<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">lannister_palette</span><span class="op">)</span>
+<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">brooklyn99_dark_palette</span><span class="op">)</span>
 
 <span class="co">## Now:</span>
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">westeros_palette</span><span class="op">$</span><span class="kw">Lannister</span>)
-<span class="kw">scales</span>::<span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span>(<span class="kw">tvthemes</span>:::<span class="kw">brooklyn99_palette</span><span class="op">$</span><span class="kw">Dark</span>)
-</pre></div>
+<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">westeros_palette</span><span class="op">$</span><span class="va">Lannister</span><span class="op">)</span>
+<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="fu">tvthemes</span><span class="fu">:::</span><span class="va">brooklyn99_palette</span><span class="op">$</span><span class="va">Dark</span><span class="op">)</span></code></pre></div>
 <p>The specific palettes that changed are:</p>
 <ul>
 <li>
@@ -183,20 +182,18 @@
 <li>
 <code>Game of Thrones/A Song of Ice &amp; Fire</code>: Default = “Stark”, “Stannis”, “Tyrell”, “Lannister”, “Manderly”, “Martell”, “Arryn”, “Greyjoy”, “Targaryen”, “Tully”</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="co">## Plot not shown</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">displ</span>)) <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(fill = <span class="kw">class</span>), col = <span class="st">"black"</span>, size = <span class="fl">0.1</span>) <span class="op">+</span>
-  <span class="fu"><a href="../reference/westeros_pal.html">scale_fill_westeros</a></span>(palette = <span class="st">"Stannis"</span>, n = <span class="fl">7</span>, reverse = <span class="fl">TRUE</span>)
-</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Plot not shown</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">displ</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">class</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"black"</span>, size <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/westeros_pal.html">scale_fill_westeros</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Stannis"</span>, n <span class="op">=</span> <span class="fl">7</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p>For themes the one change is a toggle option for axis ticks via <code>ticks</code> which you can set to either <code>TRUE</code> and the default <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="co">## Plot not shown</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">displ</span>)) <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(fill = <span class="kw">class</span>), col = <span class="st">"black"</span>, size = <span class="fl">0.1</span>) <span class="op">+</span>
-  <span class="fu"><a href="../reference/kimPossible_pal.html">scale_fill_kimPossible</a></span>(n = <span class="fl">5</span>, reverse = <span class="fl">FALSE</span>) <span class="op">+</span>
-  <span class="fu"><a href="../reference/theme_hildaDay.html">theme_hildaDay</a></span>(ticks = <span class="fl">TRUE</span>)
-</pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Plot not shown</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">displ</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">class</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"black"</span>, size <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/kimPossible_pal.html">scale_fill_kimPossible</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">5</span>, reverse <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="../reference/theme_hildaDay.html">theme_hildaDay</a></span><span class="op">(</span>ticks <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 </div>
   </div>
 
